@@ -1,0 +1,19 @@
+---
+title: "Blog"
+layout: "base.html"
+---
+
+<div>
+  <h1>Blog</h1>
+  
+  <div class="blog-list">
+
+    {% for post in collections.post reversed %}
+      <a href='{{post.url}}' class="blog-single">
+        <p class="title">{{ post.data.title }}</p>
+
+        <p class="description">{{ post.data.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</div>

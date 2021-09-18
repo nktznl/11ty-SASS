@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "keywords": ["11ty", "SASS", "SCSS", "eleventy"],
+  "keywords": [
+    "11ty",
+    "SASS",
+    "SCSS",
+    "eleventy"
+  ],
   "author": "Nikita Zanella",
   "license": "ISC",
   "scripts": {
