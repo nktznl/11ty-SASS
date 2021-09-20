@@ -35,6 +35,12 @@ $background-dark-theme: #333333;
   .blog-single {
     color: $font-dark-theme;
   }
+
+  footer {
+    a {
+      color: $font-dark-theme;
+    }
+  }
 }
 
 body {
