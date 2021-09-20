@@ -1,30 +1,28 @@
 const nightModeButton = document.getElementById("nightModeButton");
 const nightModeDiv = document.getElementById("nightModeDiv");
 
-const darkModeHandler = () => {
+// Dark Mode Handler => switch theme on button click.
 
-  if (localStorage.getItem('darkMode') == '1') {
+const darkModeHandler = () => {
+  if (localStorage.getItem("darkMode") == "1") {
     nightModeDiv.classList.remove("dark-theme");
-    localStorage.setItem('darkMode', '0');
+    localStorage.setItem("darkMode", "0");
   } else {
     nightModeDiv.classList.add("dark-theme");
-    localStorage.setItem('darkMode', '1');
+    localStorage.setItem("darkMode", "1");
   }
-  
 };
 
-const darkModeState = () => {
+// Dark Moda State Handler => check if a 'darkMode' local store exist. 
+// If true, activate darkMode, else create a localStorage called 'darkMode'
 
-  if (localStorage.getItem('darkMode') == '1') {
+const darkModeState = () => {
+  if (localStorage.getItem("darkMode") == "1") {
     nightModeDiv.classList.add("dark-theme");
   } else {
-    localStorage.setItem('darkMode', '0');
+    localStorage.setItem("darkMode", "0");
   }
-  
-}
+};
 
-nightModeButton.addEventListener('click', darkModeHandler);
-nightModeDiv.addEventListener('load', darkModeState());
-
-// Add localStorage capabilities to keep darkMode state on page change and/or page reload.
-
+nightModeButton.addEventListener("click", darkModeHandler);
+nightModeDiv.addEventListener("load", darkModeState());
