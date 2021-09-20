@@ -14,6 +14,6 @@ A simple starter template for blogs made with 11ty and SASS. Night mode ready �
 4. Visit http://localhost:8080 to see your work-in-progress
 5. Do your things with Eleventy and SASS and see your changes instantly!
 6. When you’re projet is ready: `npm run build`
-7. Host your project on ([Netlify])(https://www.netlify.com/)
+7. Host your project on [Netlify](https://www.netlify.com/)
 
 That’s all!
