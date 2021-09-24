@@ -208,3 +208,19 @@ body {
     display: inline-block;
   }
 }
+
+@media screen and (max-width: 1150px) {
+  body {
+    nav {
+      width: 90%;
+    }
+
+    main {
+      width: 90%;
+    }
+  
+    footer {
+      width: 90%;
+    }
+  }
+}

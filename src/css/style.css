@@ -126,3 +126,11 @@ body {
     border-style: solid;
     border-width: 1px;
     display: inline-block; }
+
+@media screen and (max-width: 1150px) {
+  body nav {
+    width: 90%; }
+  body main {
+    width: 90%; }
+  body footer {
+    width: 90%; } }
