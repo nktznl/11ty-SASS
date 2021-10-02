@@ -1,8 +1,8 @@
-# 11ty SASS [LIVE DEMO](https://nikitazanella-11tysass.netlify.app/)
+# 11ty SASS [LIVE DEMO](https://11ty-sass.netlify.app/)
 
 A simple starter template for blogs made with 11ty and SASS. Night mode ready 🌕
 
-* [View on Netlify](https://nikitazanella-11tysass.netlify.app/https://nikitazanella-11tysass.netlify.app/)
+* [View on Netlify](https://11ty-sass.netlify.app/)
 * [View on GitHub](https://github.com/NikitaZanella/11ty-SASS)
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NikitaZanella/11ty-SASS)
