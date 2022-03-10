@@ -19,8 +19,8 @@
     "build": "npm-run-all build:sass --parallel build:*"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "node-sass": "^7.0.1",
+    "@11ty/eleventy": "^0.12.1",
+    "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5"
   }
 }
