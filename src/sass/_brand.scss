@@ -1,0 +1,31 @@
+.cg-logo {
+    display: inline-block;
+    height: 55px;
+
+    @media screen and (min-width: $small-screen) {
+        height: 70px;
+    }
+}
+
+.branded {
+    font-family: monospace;
+    margin: 0;
+}
+
+.branded--blue {
+    color: $san-juan;
+}
+
+.branded--dark {
+    color: $nero;
+}
+
+.branded--shoved {
+    @media screen and (min-width: 413px) {
+        margin-left: 3.5em;
+    }
+}
+
+.bordered {
+    box-shadow: 0 0 5px 3px rgba($nero, .08);
+}

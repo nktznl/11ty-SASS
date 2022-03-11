@@ -4,15 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu:500&display=fallback"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+      integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body id="nightModeDiv" class="">
     {% include components/navbar.html %}
-    <div>
-      <main>{{ content | safe }}</main>
-    </div>
+
+    <main
+      class="c-offcanvas-content-wrap"
+      aria-labelledby="accesible-offcanvas"
+    >
+      <div class="c-page l-wrapper u-pos-relative">{{ content | safe }}</div>
+    </main>
+
     {% include components/footer.html %}
+
     <script src="{{ '/js/script.js' | url }}"></script>
-    
+    <script src="{{ '/js/js-vendor/js-offcanvas.pkgd.min.js' | url }}"></script>
+    <script src="{{ '/js/js-vendor/offcanvas.js' | url }}"></script>
   </body>
 </html>
