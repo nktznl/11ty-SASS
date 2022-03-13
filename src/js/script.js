@@ -1,3 +1,14 @@
+const el = document.querySelector("#masthead");
+const observer = new IntersectionObserver(
+  ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+  { threshold: [1] }
+);
+
+observer.observe(el);
+
+nightModeButton.addEventListener("click", darkModeHandler);
+nightModeDiv.addEventListener("load", darkModeState());
+
 const nightModeButton = document.getElementById("nightModeButton");
 const nightModeDiv = document.getElementById("nightModeDiv");
 
@@ -13,7 +24,7 @@ const darkModeHandler = () => {
   }
 };
 
-// Dark Moda State Handler => check if a 'darkMode' local store exist. 
+// Dark Mode State Handler => check if a 'darkMode' local store exist.
 // If true, activate darkMode, else create a localStorage called 'darkMode'
 
 const darkModeState = () => {
@@ -23,6 +34,3 @@ const darkModeState = () => {
     localStorage.setItem("darkMode", "0");
   }
 };
-
-nightModeButton.addEventListener("click", darkModeHandler);
-nightModeDiv.addEventListener("load", darkModeState());

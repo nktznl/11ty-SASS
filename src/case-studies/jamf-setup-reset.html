@@ -1,0 +1,404 @@
+---
+title: "Blog"
+layout: "base.html"
+---
+
+<section>
+  <h1 id="accesible-offcanvas" class="text-center">Jamf Setup & Reset</h1>
+  <figure aria-hidden="true" role="presentation">
+    <picture>
+      <source srcset="img/setup-reset--beauty.webp" type="image/webp" />
+      <source srcset="img/setup-reset--beauty.png" type="image/jpeg" />
+      <img src="img/setup-reset--beauty.png" alt="" />
+    </picture>
+  </figure>
+
+  <p>
+    Companies large and small use Jamf Pro to manage their fleet of Apple
+    devices. Jamf Pro allows IT administrators to remotely send commands and
+    configurations directly to those devices, so users can remain productive. We
+    wanted to leverage Jamf Pro’s relationship with enrolled devices to offer a
+    personalized, secure experience on a shared device. A pair of iOS apps, one
+    for the configuration and one for the resetting of the device was the
+    Product Owner’s solution.
+  </p>
+</section>
+
+<section>
+  <h2>The Problem</h2>
+  <p>
+    How can we leverage Jamf Pro’s relationship with enrolled devices to offer a
+    personalized, secure experience on a shared device?
+  </p>
+  <ul>
+    <li>
+      Some Organizations may elect to allow employees to share devices for work
+      purposes.
+    </li>
+    <li>
+      This presents a challenge for IT as each user wants their work and
+      personal information to remain private even when using a shared device.
+    </li>
+    <li>
+      Expecting each user to have the know-how to manually configure or reset
+      their device each time is impractical
+    </li>
+    <li>
+      Requiring IT to manually do so can be tedious and unrealistic as IT may
+      not always know who is accessing what device and when.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>User & Audience</h2>
+  <p>
+    The target users of the Jamf Setup and Jamf Reset apps are those who
+    leverage an iOS device to complete their daily work responsibilities.
+  </p>
+  <ul>
+    <li>
+      There is a good chance that the user has never heard of Mobile Device
+      Management or knows what Jamf Pro is.
+    </li>
+    <li>
+      They will be familiar with iOS and know how to utilize it to complete
+      their daily tasks.
+    </li>
+    <li>
+      Simplicity and a native iOS feel will be important to these users as they
+      will want to spend as little time as possible configuring the device so
+      that they can focus on work productivity.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Team & Role</h2>
+  <p>
+    I was the primary UX Designer for both the Setup and Reset apps. I worked
+    extensively with:
+  </p>
+  <ul>
+    <li>The Product Owner to capture requirements.</li>
+    <li>A UX Researcher to test User Flows and interactions</li>
+    <li>
+      2 iOS Developers to ensure that everything designed and tested made it to
+      the final apps.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>The Design Process</h2>
+
+  <p>
+    Configuring an individual device for multiple unique users was not a new
+    problem. We knew there was desire for this functionality from feature
+    requests as well as through partnerships with customers.
+  </p>
+
+  <p>
+    We started Jamf Setup with a prototype application that allowed end-users to
+    apply settings back to Jamf Pro from their devices.
+  </p>
+
+  <figure aria-hidden="true" role="presentation">
+    <picture>
+      <source srcset="img/setup-prototype-edits.webp" type="image/webp" />
+      <source srcset="img/setup-prototype-edits.png" type="image/jpeg" />
+      <img src="img/setup-prototype-edits.png" class="bordered" alt="" />
+    </picture>
+    <figcaption>
+      Iteration on the prototype app to simplify mechanics.
+    </figcaption>
+  </figure>
+  <p>
+    Instead of applying settings on an individual basis, we restructured the
+    prototype to present the user with a simple list of familiar options that
+    would map back to Configuration Profiles in Jamf Pro. The user would pick a
+    profile and all of the settings and configuration would come to them.
+  </p>
+
+  <hr />
+
+  <p>
+    With the new prototype in place we developed a realistic workflow that a
+    user might follow before and after a shift.
+  </p>
+
+  <figure aria-hidden="true" role="presentation">
+    <picture>
+      <source srcset="img/setup-reset-workflow.webp" type="image/webp" />
+      <source srcset="img/setup-reset-workflow.png" type="image/jpeg" />
+      <img src="img/setup-reset-workflow.png" class="bordered" alt="" />
+    </picture>
+    <figcaption>
+      User's workflow for configuring and wiping a shared device
+    </figcaption>
+  </figure>
+
+  <p>
+    The restructuring of the prototype app for Jamf Setup simplified the User
+    Flow significantly, so much so that we were left with a one screen
+    application. We knew that Jamf Reset would be just as simple.
+  </p>
+
+  <hr />
+
+  <p>
+    Armed with our prototype app and workflow we matched each step in the
+    workflow with an interaction to build our User Flow.
+  </p>
+
+  <figure aria-hidden="true" role="presentation">
+    <picture>
+      <source srcset="img/setup-reset-userflow.webp" type="image/webp" />
+      <source srcset="img/setup-reset-userflow.png" type="image/jpeg" />
+      <img src="img/setup-reset-userflow.png" class="bordered" alt="" />
+    </picture>
+    <figcaption>Basic interactions mapped over our workflow.</figcaption>
+  </figure>
+  <p>
+    Each app consisted of a single interaction point and required two distinct
+    actions before any backend process began. We worked to make the experience
+    of using the apps feel like they belonged together and were the ‘bookends’
+    of using an iOS device as a tool to complete their daily tasks.
+  </p>
+
+  <hr />
+
+  <p>
+    At this point we had a prototype app, a workflow, and our User Flow, so it
+    was time to start pushing pixels.
+  </p>
+
+  <figure aria-hidden="true" role="presentation">
+    <picture>
+      <source srcset="img/reset-userflow.webp" type="image/webp" />
+      <source srcset="img/reset-userflow.png" type="image/jpeg" />
+      <img src="img/reset-userflow.png" class="bordered" alt="" />
+    </picture>
+    <figcaption>
+      Sketch mockups showing low fidelity layout as well as higher fidelity User
+      Flow.
+    </figcaption>
+  </figure>
+  <p>
+    Here we began taking into account possible errors and failures on the
+    backend of the application and how to relay such information to the user.
+  </p>
+
+  <hr />
+
+  <p>
+    Once we were happy with our User Flows we built an end-to-end static
+    prototype to test everything we had designed.
+  </p>
+
+  <figure aria-hidden="true" role="presentation">
+    <picture>
+      <source srcset="img/setup-reset-test-screens.webp" type="image/webp" />
+      <source srcset="img/setup-reset-test-screens.png" type="image/jpeg" />
+      <img src="img/setup-reset-test-screens.png" class="bordered" alt="" />
+    </picture>
+    <figcaption>
+      Sketch Artboards used to create our InVision prototype for user testing.
+    </figcaption>
+  </figure>
+  <p>
+    A series of user tests were ran using our InVision prototype. Results were
+    favorable, so the iOS Developers took the screens and began building the
+    final apps.
+  </p>
+</section>
+
+<section>
+  <h2>Interface Design</h2>
+  <div>
+    <p>
+      We leaned heavily on the Apple iOS Interface Guidelines as we wanted the
+      experience to look and feel as close to native as possible.
+    </p>
+
+    <div class="two-up--flex">
+      <figure>
+        <picture>
+          <source srcset="img/setup-main-view.webp" type="image/webp" />
+          <source srcset="img/setup-main-view.png" type="image/png" />
+          <img
+            src="img/setup-main-view.png"
+            aria-hidden="true"
+            role="presentation"
+            alt=""
+          />
+        </picture>
+        <figcaption>
+          Jamf Setup's configuration profile option uses the native iOS
+          <a
+            href="https://developer.apple.com/design/human-interface-guidelines/ios/views/tables/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Table View</a
+          >.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <picture>
+          <source srcset="img/reset-alert-view.webp" type="image/webp" />
+          <source srcset="img/reset-alert-view.png" type="image/png" />
+          <img
+            src="img/reset-alert-view.png"
+            aria-hidden="true"
+            role="presentation"
+            alt=""
+          />
+        </picture>
+        <figcaption>
+          We use the
+          <a
+            href="https://developer.apple.com/design/human-interface-guidelines/ios/views/alerts/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Alert View</a
+          >
+          to display Reset's confirmation dialogs.
+        </figcaption>
+      </figure>
+    </div>
+
+    <p>
+      The apps were designed with generic branding in the form of a banner
+      graphic and a matching button color. We also had to take into account that
+      these apps would have customization options. The IT Administrator who
+      managed the apps would have the ability to add their own branding via the
+      Managed App Configuration (MAC) File. Customization included:
+    </p>
+    <ul>
+      <li>replacing the banner graphic</li>
+      <li>changing the background and button color</li>
+      <li>modifying the headline and body copy</li>
+    </ul>
+
+    <p>
+      We provided some constraints (max width and height of the graphic and the
+      number of lines of copy) and I took care in the layout so that the iOS
+      Developers could leverage
+      <a
+        href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Auto Layout</a
+      >
+      for consistent rendering.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div>
+    <h2>Interaction Design</h2>
+    <p>
+      Because we wanted to maintain a native feel, the interactions needed came
+      directly from iOS.
+    </p>
+
+    <div class="two-up--flex">
+      <figure>
+        <video
+          controls
+          width="300"
+          aria-hidden="true"
+          role="presentation"
+          poster="img/setup-loading.jpg"
+        >
+          <source src="img/setup-loading.webm" type="video/webm" />
+          <source src="img/setup-loading.mp4" type="video/ogg" />
+          <source src="img/setup-loading.mp4" type="video/mp4" />
+
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <figcaption>
+          The loading screen seamlessly transitions to the main view.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <video
+          controls
+          width="300"
+          aria-hidden="true"
+          role="presentation"
+          poster="img/reset-modal.jpg"
+        >
+          <source src="img/reset-modal.webm" type="video/webm" />
+          <source src="img/reset-modal.ogg" type="video/ogg" />
+          <source src="img/reset-modal.mp4" type="video/mp4" />
+
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <figcaption>
+          The concept of
+          <a
+            href="https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/modality/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Modality</a
+          >
+          is applied to confirming a destructive action.
+        </figcaption>
+      </figure>
+    </div>
+
+    <p>
+      We also used a
+      <a
+        href="(https://developer.apple.com/design/human-interface-guidelines/ios/bars/navigation-bars/)"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Navigation Bar</a
+      >
+      to allow navigation to the previous page
+    </p>
+    <p>
+      The final interaction proved to be the most complicated to solve. Once the
+      configuration was received and executed, how should the user exit the app
+      to use the device? iOS Guidelines specifically state that an app cannot be
+      closed automatically, as it equates to the app crashing. Our solution
+      ended up coming directly from the final screen in the installation of iOS
+      on a device... Instruct the user to press Home Button.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div>
+    <h2>Outcome</h2>
+    <p>
+      Jamf Setup and Reset were given to partners for Beta testing. Feedback was
+      positive so they were released into the Apple App Store; you can see
+      <a
+        href="https://itunes.apple.com/us/app/jamf-setup/id1391310596"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Jamf Setup</a
+      >
+      here, and
+      <a
+        href="https://itunes.apple.com/us/app/jamf-reset/id1438242417"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Jamf Reset</a
+      >
+      here. The apps are also
+      <a
+        href="https://www.jamf.com/solutions/technologies/shared-device-management/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >marketed as a Technology Solution</a
+      >
+      on jamf.com. Jamf has applied for patents for both applications.
+    </p>
+  </div>
+</section>

@@ -1,63 +1,31 @@
 // Branding overwrites to Off-canvas and Typescale library
-body,
-.c-offcanvas-content-wrap,
-.c-offcanvas-content-wrap {
-    background-color: $desert-storm;
-}
 
 .c-button {
-    background-color: $san-juan;
-    border-color: darken($san-juan, 5%);
-    bottom: -25px;
-    box-shadow: 0px 2px 12px -4px $nero;
-    display: block;
-    font-size: 18px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 10;
+  background-color: $san-juan;
+  border-color: darken($san-juan, 5%);
+  bottom: -25px;
+  box-shadow: 0px 2px 12px -4px $nero;
+  display: block;
+  font-size: 18px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
 .c-button__text {
-    color: $desert-storm;
+  color: $desert-storm;
 }
 
 .c-offcanvas {
-    background: $san-juan;
-    background-image: url(../img/drawer-bg.jpg);
-    background-repeat: repeat;
-}
-
-.c-offcanvas-bg.is-animating,
-.c-offcanvas-bg.is-open {
-    background-color: rgba($nero, 0.7);
-}
-
-.c-menu--border .c-menu__item {
-    border-bottom: 1px solid darken($san-juan, 5%);
-    margin-bottom: 0;
-}
-
-.c-menu__link {
-    background: rgba($san-juan, .65);
-    color: $sunglow;
-}
-
-.c-menu__link:hover,
-.c-menu__link:focus {
-    background: $san-juan;
-    color: $sunglow;
-    outline: none;
-    text-decoration: none;
-}
-
-.c-menu__item--heading {
-    color: $desert-storm;
+  background: $san-juan;
+  background-image: url(../img/drawer-bg.jpg);
+  background-repeat: repeat;
 }
 
 h2 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .l-wrapper {
-    margin-top: 3em;
+  margin-top: 3em;
 }
