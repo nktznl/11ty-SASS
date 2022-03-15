@@ -1,26 +1,4 @@
-// Branding overwrites to Off-canvas and Typescale library
-
-.c-button {
-  background-color: $san-juan;
-  border-color: darken($san-juan, 5%);
-  bottom: -25px;
-  box-shadow: 0px 2px 12px -4px $nero;
-  display: block;
-  font-size: 18px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
-}
-
-.c-button__text {
-  color: $desert-storm;
-}
-
-.c-offcanvas {
-  background: $san-juan;
-  background-image: url(../img/drawer-bg.jpg);
-  background-repeat: repeat;
-}
+// Branding overwrites to Typescale library
 
 h2 {
   margin-bottom: 0;
