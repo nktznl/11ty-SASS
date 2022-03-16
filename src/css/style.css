@@ -383,6 +383,7 @@ h2 {
   margin-top: 3em; }
 
 #masthead {
+  height: 200px;
   position: sticky;
   top: -120px;
   z-index: 100; }
@@ -551,6 +552,16 @@ a {
     text-align: center; }
   .two-up--flex img {
     width: 300px; }
+
+.nameplate.is-animating.is-shoved #spinner {
+  position: relative;
+  transform: rotate(359deg);
+  transition: transform 400ms cubic-bezier(0.7, -0.2, 0.4, 1.4) 0ms; }
+
+.nameplate.is-animating.is-not-shoved #spinner {
+  position: relative;
+  transform: rotate(-359deg);
+  transition: transform 400ms cubic-bezier(0.7, -0.2, 0.4, 1.4) 0ms; }
 
 .dark-theme {
   color: #ffffff;

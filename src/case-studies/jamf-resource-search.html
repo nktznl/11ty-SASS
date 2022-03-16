@@ -1,0 +1,379 @@
+---
+title: "Case Study: Jamf.com Mobile Navigation"
+layout: "base.html"
+---
+        
+		<section>
+          <h1 id="accesible-offcanvas" class="text-center">
+            Jamf.com Resources Search
+          </h1>
+          <figure aria-hidden="true" role="presentation">
+            <picture>
+              <source srcset="/img/resources--beauty.webp" type="image/webp" />
+              <source srcset="/img/resources--beauty.png" type="image/jpeg" />
+              <img src="/img/resources--beauty.png" alt="" />
+            </picture>
+          </figure>
+
+          <p>
+            Jamf.com’s Resources section had functional limitations and
+            usability issues. Because it is such a high profile section of the
+            website we needed an improved experience for users to more easily
+            find relevant resources. Another aspect of the high profile nature
+            was a large number of stakeholders. We took care in addressing and
+            testing each requirement, but only those that fared well in testing
+            made it to the final solution.
+          </p>
+        </section>
+
+        <section>
+          <h2>The Problem</h2>
+
+          <p>
+            The legacy solution to browsing Resources consisted of 2 input
+            selects… One that showed all of Jamf’s products and one that showed
+            the types of Resources we had available. The user would select an
+            option from one (or both) input selects and hit a Search button to
+            display results.
+          </p>
+
+          <figure aria-hidden="true" role="presentation">
+            <picture>
+              <source srcset="/img/resources-legacy.webp" type="image/webp" />
+              <source srcset="/img/resources-legacy.png" type="image/png" />
+              <img src="/img/resources-legacy.png" class="bordered" alt="" />
+            </picture>
+            <figcaption>
+              The legacy solution had functional limitations and usability
+              issues.
+            </figcaption>
+          </figure>
+
+          <p>The limited functionality of the 2 input selects included:</p>
+          <ul>
+            <li>
+              The lack of search field to type keywords or phrases to search.
+            </li>
+            <li>
+              It had only 2 filters, Limiting the ability to narrow results.
+            </li>
+            <li>No sorting options were available.</li>
+          </ul>
+
+          <p>This solution also presented usability issues:</p>
+          <ul>
+            <li>
+              You can’t see the filter options unless the input select is open.
+            </li>
+            <li>
+              Using the back button would take you to your last form action, but
+              did not reset the form fields.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Team & Role</h2>
+
+          <p>
+            The Resources section is a very highly trafficked sections of
+            <a
+              href="https://www.jamf.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Jamf.com</a
+            >. Because of this, many individuals took interest in the project.
+            The team ended up including:
+          </p>
+
+          <ul>
+            <li>Not less than 10 stakeholders.</li>
+
+            <li>2 visual designers.</li>
+
+            <li>
+              1 Full Stack Developer working on the back end, middle layer and
+              the web components.
+            </li>
+
+            <li>1 Front End Developer (me) styling the web components.</li>
+
+            <li>1 UX Researcher conducting the concept and usability tests.</li>
+
+            <li>
+              1 UX Designer (me) keeping track of and processing all of the
+              information coming in from all the different channels.
+            </li>
+          </ul>
+
+          <p>
+            With a team of close to 20 people involved with the project,
+            including everyone in every decision would be difficult.
+            Communication to those not involved in decision-making and
+            collaborative working sessions was going to be crucial.
+          </p>
+        </section>
+
+        <section>
+          <h2>The Design Process</h2>
+
+          <p>
+            Varying opinions and numerous stakeholder ideas made user testing
+            and validation crucial for the design of the new Resource Search. I
+            viewed my role as a neutral observer to the differing opinions and
+            served as an impartial conduit to creating and testing assets to
+            discover which ideas users preferred.
+          </p>
+
+          <p>
+            The design process started with 3 ideas from 3 different people:
+          </p>
+          <ul>
+            <li>Idea 1 had a series of filter groups above the results.</li>
+            <li>
+              Idea 2 had a series of filter groups in a column to the left of
+              the results.
+            </li>
+            <li>
+              Idea 3 had a series of toggles that displayed the different filter
+              groups one at a time above the results.
+            </li>
+          </ul>
+
+          <p>
+            I took the 3 ideas and rendered them all as interactive prototypes
+            in Balsamiq for a round of concept testing.
+          </p>
+
+          <figure>
+            <picture>
+              <source
+                srcset="/img/resources-3-concepts.webp"
+                type="image/webp"
+              />
+              <source srcset="/img/resources-3-concepts.png" type="image/png" />
+              <img
+                src="/img/resources-3-concepts.png"
+                class="bordered"
+                aria-hidden="true"
+                role="presentation"
+                alt=""
+              />
+            </picture>
+            <figcaption>
+              The 3 original concepts for the new Resources Search rendered in
+              Balsamiq.
+            </figcaption>
+          </figure>
+
+          <p>
+            All 3 of the ideas tested well, but when asked which the users
+            preferred the result was unanimous… Idea 2 was the concept users
+            preferred.
+          </p>
+
+          <hr />
+
+          <p>
+            With the ambient layout of the solution in place I took over design
+            duties and began working on the content that would live in the
+            layout. To inform the design decisions I was soon to make I:
+          </p>
+          <ul>
+            <li>Studied the search functionality of other sites.</li>
+            <li>
+              Did heuristic research on how search results should be displayed.
+            </li>
+            <li>
+              Worked with developers to develop the data model that would feed
+              the results so I know exactly what I could display.
+            </li>
+            <li>
+              Talked with stakeholders about what they viewed was important to
+              display.
+            </li>
+          </ul>
+
+          <p>
+            With all of this information I began working on a more refined
+            wireframe in Balsamiq.
+          </p>
+          <ul>
+            <li>
+              Using the data model I determined what info I thought was valuable
+              and used typography and value to illustrate that importance.
+            </li>
+
+            <li>
+              We had questions on if and where we should display a thumbnail of
+              the result. Nielsen Norman Group has a
+              <a
+                href="https://www.nngroup.com/articles/mobile-list-thumbnail/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >wonderful flowchart</a
+              >
+              that helps decide when and where to use a thumbnail image. Using
+              the flow chart showed that we should put a thumbnail on the right
+              hand side of the search result.
+            </li>
+
+            <li>
+              One stakeholder requirement was to have 2 views of the result (an
+              expanded view with more info and a condensed view to show more
+              results on the screen) so I built this option into the prototype.
+            </li>
+          </ul>
+
+          <div class="two-up--flex">
+            <figure>
+              <picture>
+                <source
+                  srcset="/img/resources-test2-expanded.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcset="/img/resources-test2-expanded.png"
+                  type="image/png"
+                />
+                <img
+                  src="/img/resources-test2-expanded.png"
+                  class="bordered"
+                  aria-hidden="true"
+                  role="presentation"
+                  alt=""
+                />
+              </picture>
+              <figcaption>
+                The Expanded View screen of the prototype used in round 2 of
+                testing.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <picture>
+                <source
+                  srcset="/img/resources-test2-condensed.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcset="/img/resources-test2-condensed.png"
+                  type="image/png"
+                />
+                <img
+                  src="/img/resources-test2-condensed.png"
+                  class="bordered"
+                  aria-hidden="true"
+                  role="presentation"
+                  alt=""
+                />
+              </picture>
+              <figcaption>
+                This Condensed View of the search results was asked for in
+                requirement gathering.
+              </figcaption>
+            </figure>
+          </div>
+
+          <p>
+            We went into the next round of testing with a series of questions
+            that drilled into the usefulness of pretty much all of the pieces of
+            information we displayed.
+          </p>
+
+          <hr />
+
+          <p>
+            We got very precise feedback on the questions we had asked
+            including:
+          </p>
+
+          <div class="two-up--flex">
+            <figure>
+              <img
+                src="/img/resources-test2-parsing.jpg"
+                class="bordered"
+                aria-hidden="true"
+                role="presentation"
+                alt=""
+              />
+              <figcaption>Parsing the results of Concept test 2.</figcaption>
+            </figure>
+
+            <div>
+              <ul>
+                <li>
+                  The Condensed View was missing too many items and was
+                  confusing. The lack of a thumbnail and icon made it difficult
+                  to tell what type of resource the item was when scanning.
+                </li>
+                <li>
+                  The Thumbnail position was unanimously validated. Users felt
+                  that title and type was more important than image.
+                </li>
+
+                <li>
+                  The inclusion of a URL to the Resource Detail page was
+                  questioned becasue all of the Resources live under the same
+                  domain, unlike a Search Engine.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            At this point I had a very good sense of what the design needed to
+            be so it was time to increase fidelity. Besides doing the UX work
+            for this project I was also the Front End Developer, so instead of
+            working in Sketch I chose to move to the Browser.
+          </p>
+
+          <hr />
+
+          <p>
+            While the initial concept and testing were being done, the Back End
+            of the Resources Search was being written. It consists of
+            <a
+              href="https://www.elastic.co/products/elasticsearch"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Elastic Search</a
+            >
+            Indexes that talk to a series of Web Components via a layer of PHP
+            to generate the search results and display them in the browser. My
+            job from this point forward was to style the Front End to match the
+            designs we had been working on up until that point.
+          </p>
+
+          <p>
+            When development was complete we went back for one more round of
+            Usability Testing with the actual production code before it was
+            released. Test results were overwhelming positive again, with quotes
+            like:
+          </p>
+          <ul>
+            <li>“Super straightforward, and easy to use”</li>
+            <li>
+              “I can see exactly what I’m looking for, E-books, technical
+              papers, the title is clear, I really like it”
+            </li>
+            <li>
+              “I like how the filters are all open, no need to click anything
+              additional and the sort is great!”
+            </li>
+          </ul>
+
+          <p>
+            With validation in hand we presented the solution to stakeholders.
+            We got an enthusiastic sign-off from them and released to
+            production.
+          </p>
+        </section>
+
+        <section>
+          <h2>Interface Design</h2>
+
+          <p></p>
+        </section>
+      </div>
+    </main>

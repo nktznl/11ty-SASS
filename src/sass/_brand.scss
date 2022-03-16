@@ -1,31 +1,31 @@
 .cg-logo {
-    display: inline-block;
-    height: 55px;
+  display: inline-block;
+  height: 55px;
 
-    @media screen and (min-width: $small-screen) {
-        height: 70px;
-    }
+  @media screen and (min-width: $small-screen) {
+    height: 70px;
+  }
 }
 
 .branded {
-    font-family: monospace;
-    margin: 0;
+  font-family: monospace;
+  margin: 0;
 }
 
 .branded--blue {
-    color: $san-juan;
+  color: $san-juan;
 }
 
 .branded--dark {
-    color: $nero;
+  color: $nero;
 }
 
 .branded--shoved {
-    @media screen and (min-width: 413px) {
-        margin-left: 3.5em;
-    }
+  @media screen and (min-width: 413px) {
+    margin-left: 3.5em;
+  }
 }
 
 .bordered {
-    box-shadow: 0 0 5px 3px rgba($nero, .08);
+  box-shadow: 0 0 5px 3px rgba($nero, 0.08);
 }

@@ -13,15 +13,18 @@ const observer = new IntersectionObserver(
 observer.observe(mh);
 
 /*
-  Add a class "shoved status" class to the header.masthead for Transition Sequencing
-  Because I am tinkering with the Off-Canvas Library display and animation
+  Add ".is-animating" to header.nameplate AS WELL AS
+  a "shoved status" class to header.nameplate for sequencing because
+  I am tinkering with the Off-Canvas Library display and animation
 */
-
 const np = document.querySelector(".nameplate");
 
 document
   .querySelector("#drawer-trigger")
   .addEventListener("click", function () {
+    document.getElementById("spinner").removeAttribute("style");
+    np.classList.add("is-animating");
+
     if (np.classList.contains("is-shoved")) {
       np.classList.remove("is-shoved");
       np.classList.add("is-not-shoved");
@@ -31,13 +34,19 @@ document
     }
   });
 
+/* 
+  Remove ".is-animating" from header.nameplate when Nav Transitions are complete
+*/
+const transition = document.querySelector("#off-canvas-top");
+
+transition.addEventListener("transitionend", () => {
+  np.classList.remove("is-animating");
+});
+
 /*
   Dark mode Toggling that came for free with the 11ty Template
   https://github.com/NikitaZanella/11ty-SASS
 */
-nightModeButton.addEventListener("click", darkModeHandler);
-nightModeDiv.addEventListener("load", darkModeState());
-
 const nightModeButton = document.getElementById("nightModeButton");
 const nightModeDiv = document.getElementById("nightModeDiv");
 
@@ -61,3 +70,6 @@ const darkModeState = () => {
     localStorage.setItem("darkMode", "0");
   }
 };
+
+nightModeButton.addEventListener("click", darkModeHandler);
+nightModeDiv.addEventListener("load", darkModeState());

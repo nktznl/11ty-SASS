@@ -1,0 +1,422 @@
+---
+title: "Case Study: Jamf.com Mobile Navigation"
+layout: "base.html"
+---
+
+<section>
+  <h1 id="accesible-offcanvas" class="text-center">
+    Jamf.com Mobile Navigation
+  </h1>
+  <figure aria-hidden="true" role="presentation">
+    <picture>
+      <source srcset="/img/dotcom-mobile--beauty.webp" type="image/webp" />
+      <source srcset="/img/dotcom-mobile--beauty.png" type="image/png" />
+      <img src="/img/dotcom-mobile--beauty.png" alt="" />
+    </picture>
+  </figure>
+
+  <p>
+    The
+    <a href="https://www.jamf.com" target="_blank" rel="noopener noreferrer"
+      >Jamf Corporate website</a
+    >
+    uses a disclosure-based pattern affectionately referred to as the ‘Drawer’
+    for navigation. Because the drawer did not translate well to small screens,
+    we needed to design an experience that was as easy to use and as capable as
+    the Drawer was on large screens. Through iteration and testing we ended up
+    adapting the Drawer itself to work on small screens.
+  </p>
+</section>
+
+<section>
+  <h2>The Problem</h2>
+
+  <p>
+    The navbar consists of a series of toggles that each disclose a Drawer
+    containing content and links. The Drawer slides into view from under the
+    navbar. When subnav links are needed, they appear in a darker gray bar that
+    runs just underneath the global navbar.
+  </p>
+
+  <figure aria-hidden="true" role="presentation">
+    <video
+      class="bordered"
+      controls
+      width="700"
+      poster="/img/dotcom-desktop.jpg"
+    >
+      <source src="/img/dotcom-desktop.webm" type="video/webm" />
+      <source src="/img/dotcom-desktop.ogg" type="video/ogg" />
+      <source src="/img/dotcom-desktop.mp4" type="video/mp4" />
+
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+    <figcaption>
+      The jamf.com large screen navigation featuring The Drawer.
+    </figcaption>
+  </figure>
+
+  <p>
+    The horizontal nature of the bars does not work on small screens. Because of
+    this, we used a second set of links for our small screen navigation. This
+    set of links was hidden on large screens via Media Query. The Drawer toggles
+    were hidden on small screens in the same manner.
+  </p>
+
+  <div class="two-up--flex">
+    <figure aria-hidden="true" role="presentation">
+      <video
+        class="bordered"
+        controls
+        width="300"
+        poster="/img/dotcom-old-nav.jpg"
+      >
+        <source src="/img/dotcom-old-nav.webm" type="video/webm" />
+        <source src="/img/dotcom-old-nav.ogg" type="video/ogg" />
+        <source src="/img/dotcom-old-nav.mp4" type="video/mp4" />
+
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <figcaption>The original small screen navigation solution.</figcaption>
+    </figure>
+
+    <div>
+      <p>
+        This small screen solution presented UX issues. This long and loosely
+        structured list of links could be very disorienting to the user.
+      </p>
+      <ul>
+        <li>
+          To account for all the links available in the Drawer, we used logic to
+          hide/show contextual links and sometimes breadcrumbs.
+        </li>
+        <li>
+          It was difficult to retain a sense of place because the display was
+          always subtly changing.
+        </li>
+        <li>Some links were unavailable on small screens all together.</li>
+        <li>
+          Because you only saw sibling links under a parent there was no way to
+          traverse the site from a subpage.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <p>
+    We pondered how we could provide a navigation experience on small screen
+    that was comparable in ability to its large screen counterpart. With the
+    problem defined I went to work.
+  </p>
+</section>
+
+<section>
+  <h2>The Design Process</h2>
+
+  <p>
+    I spent no time with pencil and paper or in Sketch at the beginning of this
+    project; instead I designed in the browser using the existing markup. I
+    thought critically about the mechanics of the Drawer on a large screen and
+    how I could translate the Drawer to a smaller area.
+  </p>
+  <ul>
+    <li>
+      It occurred to me that our existing small-screen navigation transitioned
+      into view in the exact same way the Drawer did on large screens.
+    </li>
+    <li>
+      The issue with using this pattern on the small screen wasn’t the drawer
+      itself, but it was the toggles. How could they take up less horizontal
+      space?
+    </li>
+  </ul>
+
+  <p>
+    I recalled the small screen nav of
+    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer"
+      >espn.com</a
+    >. It had a series of skinny links running vertically along the left side of
+    the screen with more links in the larger division.
+  </p>
+
+  <figure aria-hidden="true" role="presentation">
+    <picture>
+      <source srcset="/img/espn-dotcom-90deg-comp.webp" type="image/webp" />
+      <source srcset="/img/espn-dotcom-90deg-comp.png" type="image/png" />
+      <img src="/img/espn-dotcom-90deg-comp.png" class="bordered" alt="" />
+    </picture>
+    <figcaption>
+      Comparing the ESPN nav with Jamf’s Drawer rotated 90 degrees.
+    </figcaption>
+  </figure>
+
+  <p>
+    My Aha moment was correlating this ESPN navigation to our large screen
+    Drawer-based navigation turned on it's side.
+  </p>
+
+  <hr />
+
+  <p>
+    Some heuristic experts say that
+    <a
+      href="https://www.lukew.com/ff/entry.asp?1649"
+      target="_blank"
+      rel="noopener noreferrer"
+      >upper left is a bad place for buttons</a
+    >
+    because of the stretch it takes to reach a thumb across the screen for right
+    handed users. Taking this into account my first prototype had the hamburger
+    menu on the right hand side of the navbar with all of the elements (toggles,
+    Drawer, and any subnav links) sliding in from right to left.
+  </p>
+
+  <div class="two-up--flex">
+    <figure aria-hidden="true" role="presentation">
+      <video
+        class="bordered"
+        controls
+        width="300"
+        poster="/img/mobile-nav-prototype-1.jpg"
+      >
+        <source src="/img/mobile-nav-prototype-1.webm" type="video/webm" />
+        <source src="/img/mobile-nav-prototype-1.ogg" type="video/ogg" />
+        <source src="/img/mobile-nav-prototype-1.mp4" type="video/mp4" />
+
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <figcaption>
+        The first iteration of my small screen Drawer concept with all elements
+        coming from the right.
+      </figcaption>
+    </figure>
+
+    <div>
+      <p>
+        Not bad... I immediately felt a strong correlation between the large and
+        small screen experiences. It was not without issues though.
+      </p>
+      <ul>
+        <li>
+          Because we read left to right, sliding the content from the right felt
+          unnatural.
+        </li>
+        <li>
+          The pacing of the transition felt rushed, especially when subnav links
+          were involved.
+        </li>
+        <li>
+          The subnav links took up most of the main content area when the nav
+          was engaged.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <p>
+    Taking these thoughts into account I went to work on the second iteration.
+  </p>
+
+  <div class="two-up--flex">
+    <figure aria-hidden="true" role="presentation">
+      <video
+        class="bordered"
+        controls
+        width="300"
+        poster="/img/mobile-nav-prototype-2.jpg"
+      >
+        <source src="/img/mobile-nav-prototype-2.webm" type="video/webm" />
+        <source src="/img/mobile-nav-prototype-2.ogg" type="video/ogg" />
+        <source src="/img/mobile-nav-prototype-2.mp4" type="video/mp4" />
+
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <figcaption>The second iteration after implementing feedback.</figcaption>
+    </figure>
+
+    <div>
+      <ul>
+        <li>
+          I moved the hamburger to the left side of the navbar and had the
+          drawer toggles slide in from the left. I took the ergonomics into
+          account in this decision, but a quick scan of popular sites and apps
+          showed that left side nav is used as often as right side. I also
+          polled other designers and they agreed that it felt more natural for
+          everything to flow left to right.
+        </li>
+        <li>
+          I slowed the transition slightly and applied some easing to make it
+          feel less rushed and give it some character.
+        </li>
+        <li>I removed the Subnav links all together for the time being.</li>
+        <li>
+          To bring the look and feel closer to the large screen interface I
+          mimicked its hover and active states for the toggles.
+        </li>
+        <li>
+          I also experimented with having the drawer disclose from the top, as
+          it does on the large screen version.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <p>
+    I sought more feedback, this time from a senior member of the UX team. We
+    inferred that when a user clicks the hamburger the expectation is to see
+    links, not another series of options to click to get to links. To solve this
+    we decided that it would be better for one of the drawers to open with the
+    toggles.
+  </p>
+
+  <div class="two-up--flex">
+    <figure aria-hidden="true" role="presentation">
+      <video
+        class="bordered"
+        controls
+        width="300"
+        poster="/img/mobile-nav-prototype-3.jpg"
+      >
+        <source src="/img/mobile-nav-prototype-3.webm" type="video/webm" />
+        <source src="/img/mobile-nav-prototype-3.ogg" type="video/ogg" />
+        <source src="/img/mobile-nav-prototype-3.mp4" type="video/mp4" />
+
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <figcaption>
+        Iteration 3 felt like a complete and workable solution.
+      </figcaption>
+    </figure>
+
+    <div>
+      <ul>
+        <li>
+          The Drawer and toggles would slide on to the screen in one fluid
+          motion from left to right.
+        </li>
+        <li>
+          The navigation would take over the entire screen leaving no doubt what
+          the interaction was.
+        </li>
+        <li>
+          The ability to completely close the drawer was removed on small
+          screens. Tapping the toggle of an open drawer would do nothing.
+        </li>
+        <li>
+          To tighten the correlation between the active toggle and its Drawer I
+          changed the background color of the active toggle to match the drawer
+          background.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <p>
+    Iteration 4 was all about reintroducing the subnav links that were removed
+    from the solution earlier in the process. At this point I broke out the
+    pencil and paper to ideate. I felt that designing in the browser might not
+    be the most effective method of rendering my sketches, so instead I build
+    static prototypes of my 2 best ideas (one in Figma and one in InVision). I
+    also arranged usability testing for these 2 options.
+  </p>
+
+  <div class="two-up--flex">
+    <figure aria-hidden="true" role="presentation">
+      <video
+        class="bordered"
+        controls
+        width="300"
+        poster="/img/subnav-prototype-1.jpg"
+      >
+        <source src="/img/subnav-prototype-1.webm" type="video/webm" />
+        <source src="/img/subnav-prototype-1.ogg" type="video/ogg" />
+        <source src="/img/subnav-prototype-1.mp4" type="video/mp4" />
+
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <figcaption>
+        The first candidate, built in Figma, used a horizontal scrolling subnav
+        bar in the same position as the large screen subnav.
+      </figcaption>
+    </figure>
+
+    <div>
+      <figure aria-hidden="true" role="presentation">
+        <video
+          class="bordered"
+          controls
+          width="300"
+          poster="/img/subnav-prototype-2.jpg"
+        >
+          <source src="/img/subnav-prototype-2.webm" type="video/webm" />
+          <source src="/img/subnav-prototype-2.ogg" type="video/ogg" />
+          <source src="/img/subnav-prototype-2.mp4" type="video/mp4" />
+
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <figcaption>
+          The second candidate, built in InVision, put the subnav links in a
+          collapsing accordion that toggled with a caret next to the parent
+          link.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <p>
+    While neither failed usability tests, the time on task for the second
+    candidate was significantly less than the first, so I built that into the
+    the solution.
+  </p>
+</section>
+
+<section>
+  <h2>Outcome</h2>
+
+  <figure class="text-center" aria-hidden="true" role="presentation">
+    <video
+      class="bordered"
+      controls
+      width="300"
+      poster="/img/mobile-nav-final.jpg"
+    >
+      <source src="/img/mobile-nav-final.webm" type="video/webm" />
+      <source src="/img/mobile-nav-final.ogg" type="video/ogg" />
+      <source src="/img/mobile-nav-final.mp4" type="video/mp4" />
+
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+    <figcaption>
+      The new mobile nav as seen on
+      <a href="https://www.jamf.com" target="_blank" rel="noopener noreferrer"
+        >jamf.com</a
+      >.
+    </figcaption>
+  </figure>
+
+  <p>
+    After 4 iterations, numerous feedback sessions, and a round of usability
+    testing we had a solution that was worthy of presenting to stakeholders.
+    Feedback was unanimously positive, so the prototype was rolled into the
+    site's codebase and prepped for production release. The solution can be seen
+    on
+    <a href="https://www.jamf.com" target="_blank" rel="noopener noreferrer"
+      >jamf.com</a
+    >
+    as we speak. There are plans for
+    <a
+      href="https://www.jamf.com/jamf-nation"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Jamf Nation</a
+    >
+    to adpot the pattern as well. I have built a prototype of Jamf Nation's IA
+    using the nav and am consulting on its implementation.
+  </p>
+</section>

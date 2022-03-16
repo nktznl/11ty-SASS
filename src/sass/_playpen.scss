@@ -1,0 +1,20 @@
+// Rotating logo ya say?
+// Tied to scroll?
+// OR
+// A spin on shove?
+
+.nameplate.is-animating.is-shoved {
+  #spinner {
+    position: relative;
+    transform: rotate(359deg);
+    transition: $bouncy;
+  }
+}
+
+.nameplate.is-animating.is-not-shoved {
+  #spinner {
+    position: relative;
+    transform: rotate(-359deg);
+    transition: $bouncy;
+  }
+}
