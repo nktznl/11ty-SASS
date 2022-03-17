@@ -1,4 +1,5 @@
-.u-unstyled, .o-list-inline {
+.u-unstyled,
+.o-list-inline {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -26,13 +27,10 @@
 
 html {
   overflow: hidden;
-  font-size: 1em;
-  font-family: "Roboto", sans-serif;
+  font-size: 20px;
   line-height: 1.5;
-  background-color: #fff;
-  color: #333;
-  overflow-y: scroll;
   min-height: 100%;
+  overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -234,7 +232,11 @@ h4 {
 
 .c-button {
   background: transparent;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.08));
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.08)
+  );
   background-color: #4e4e4e;
   border-color: #4e4e4e;
   border-style: solid;
@@ -247,7 +249,7 @@ h4 {
   font: inherit;
   font-weight: 300;
   margin: 0;
-  padding: 0.38198em 0.7293em;
+  padding: 0.6rem;
   margin: 0 0 0.38198em;
   position: relative;
   text-align: center;
@@ -256,7 +258,8 @@ h4 {
   overflow: hidden;
   vertical-align: middle;
 }
-.c-button:hover, .c-button:focus {
+.c-button:hover,
+.c-button:focus {
   color: #fafafa;
 }
 @media (min-width: 46.25em) {
@@ -280,8 +283,6 @@ h4 {
 .c-button:focus:not(:hover) {
   outline: 4px solid #c5dbfc;
 }
-
-
 
 .c-menu {
   margin: 0;
@@ -333,7 +334,8 @@ h4 {
   background: #fafafa;
 }
 
-.c-menu__link:hover, .c-menu__link:focus {
+.c-menu__link:hover,
+.c-menu__link:focus {
   color: #212121;
   outline: none;
   text-decoration: none;
@@ -343,5 +345,3 @@ h4 {
 .c-menu--small .c-menu__link {
   font-size: 1.18em;
 }
-
-

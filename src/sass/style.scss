@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-$font-stack: Helvetica, sans-serif;
 $font-light-theme: #333333;
 $background-light-theme: #ffffff;
 
@@ -9,24 +8,11 @@ $background-dark-theme: #333333;
 
 $small-screen: 700px;
 
-// Neutrals
-$white: #ffffff;
-$desert-storm: #f8f8f7;
-$nero: #181300;
-
-// Brand Gold
-$sunglow: #ffcc33;
-
-// Brand Blue
-$san-juan: #355a72;
-$astral: #3670b4;
-
 @import "utilities";
+@import "colors";
 
 @import "vendor/js-offcanvas";
 @import "vendor/typescale";
-
-@import "overwrites";
 
 @import "offcanvas-mods";
 

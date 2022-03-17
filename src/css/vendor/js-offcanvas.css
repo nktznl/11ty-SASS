@@ -67,7 +67,7 @@
   left: 0;
   right: 0;
   top: 0;
-  height: 12.5em;
+  height: 10em;
   min-height: auto;
   width: 100%;
-  transform: translate3d(0, -12.5em, 0); }
+  transform: translate3d(0, -10em, 0); }
