@@ -1,14 +1,14 @@
 {
-  "name": "11ty-sass",
+  "name": "CGDC-2022",
   "version": "1.0.0",
-  "description": "11ty starter template with SASS support and Dark Mode.",
+  "description": "Portfolio SSG forked from NikitaZanella/11ty-SASS",
   "keywords": [
     "11ty",
     "SASS",
     "SCSS",
     "eleventy"
   ],
-  "author": "Nikita Zanella",
+  "author": "Craig Gieselman",
   "license": "ISC",
   "scripts": {
     "watch:sass": "node-sass --watch src/sass -o src/css",

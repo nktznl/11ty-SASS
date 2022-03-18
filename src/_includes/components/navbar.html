@@ -72,8 +72,19 @@
     class="drawer js-offcanvas"
     data-offcanvas-options='{"modifiers":"top,overlay,overflow-top"}'
     id="off-canvas-top"
-    role="complementary"
+    role="navigation"
   >
-    <p>Navigation Links will go here... Some day.</p>
+    {% for filename in case-studies %}
+    <li><a href="case-studies/{{ filename }}">{{ filename }}</a></li>
+    {% endfor %}
+
+    <!-- <ul>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/resume.html">Resume</a></li>
+      <li><a href="case-studies/jamf-mobile-nav.html">Case Study</a></li>
+      <li><a href="case-studies/jamf-resource-search">Case Study</a></li>
+      <li><a href="case-studies/jamf-setup-reset.html">Case Study</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul> -->
   </nav>
 </div>

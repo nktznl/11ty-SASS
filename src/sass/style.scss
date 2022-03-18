@@ -8,7 +8,6 @@ $background-dark-theme: #333333;
 
 $small-screen: 700px;
 
-@import "utilities";
 @import "colors";
 
 @import "vendor/js-offcanvas";
@@ -55,6 +54,47 @@ $small-screen: 700px;
   footer {
     a {
       color: $font-dark-theme;
+    }
+  }
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+img {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#nightModeDiv {
+  .night-mode-btn {
+    .toLight {
+      display: none;
+    }
+    .toDark {
+      display: block;
+    }
+  }
+
+  &.dark-theme {
+    .night-mode-btn {
+      .toLight {
+        display: block;
+      }
+      .toDark {
+        display: none;
+      }
     }
   }
 }

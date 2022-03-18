@@ -1,19 +1,11 @@
-# 11ty SASS [LIVE DEMO](https://11ty-sass.netlify.app/)
+Dipping my toes back into SSGs to build up a new UX Portfolio. all the cool kids seem to use [Eleventy](https://www.11ty.dev/) & [Netlify](https://www.netlify.com/), so Imma give that a whirl.
 
-A simple starter template for blogs made with 11ty and SASS. Night mode ready 🌕
+I forked [Nikita Zanella](https://github.com/NikitaZanella/)'s [Starter template](https://github.com/NikitaZanella/11ty-SASS) because it was a nice combo of preconfiguration and room for customization. I highly recommend it. Check out the [starter example](https://11ty-sass.netlify.app/), or head on over to [craiggieselman.com](https://craiggieselman.com/) and take a peek at how I customized it.
 
-* [View on Netlify](https://11ty-sass.netlify.app/)
-* [View on GitHub](https://github.com/NikitaZanella/11ty-SASS)
+## Get up and running quickly!
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NikitaZanella/11ty-SASS)
-
-## How you can use it
-1. [Create your own new repo from this template](https://github.com/NikitaZanella/11ty-SASS/generate), or [clone this one](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-2. Install dependencies: `npm i` or `npm install`
-3. Start development: `npm run start`
-4. Visit http://localhost:8080 to see your work-in-progress
-5. Do your things with Eleventy and SASS and see your changes instantly!
-6. When you’re projet is ready: `npm run build`
-7. Host your project on [Netlify](https://www.netlify.com/)
-
-That’s all!
+1. [Clone the repo](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+2. Install the dependencies: `npm i` or `npm install`
+3. Fire up 11ty: `npm run start`
+4. http://localhost:8080 is your local dev server (with Hot Reloading)
+5. When you are satisfied, `npm run build` to generate your site. OR... Its REEEEAAALLLLY easy to host your project on [Netlify](https://www.netlify.com/). Seriously you should try it... Don't cost nuthin!
