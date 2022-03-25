@@ -44,19 +44,19 @@ transition.addEventListener("transitionend", () => {
 });
 
 /*
-  Dark mode Toggling that came for free with the 11ty Template
+  Modded Dark Mode toggling that came for free with the 11ty Template
   https://github.com/NikitaZanella/11ty-SASS
 */
-const nightModeButton = document.getElementById("nightModeButton");
-const nightModeDiv = document.getElementById("nightModeDiv");
+const ttg = document.querySelector("#theme-toggle");
+const html = document.querySelector("html");
 
 // Dark Mode Handler => switch theme on button click.
 const darkModeHandler = () => {
   if (localStorage.getItem("darkMode") == "1") {
-    nightModeDiv.classList.remove("dark-theme");
+    html.dataset.theme = `theme-light`;
     localStorage.setItem("darkMode", "0");
   } else {
-    nightModeDiv.classList.add("dark-theme");
+    html.dataset.theme = `theme-dark`;
     localStorage.setItem("darkMode", "1");
   }
 };
@@ -65,11 +65,12 @@ const darkModeHandler = () => {
 // If true, activate darkMode, else create a localStorage called 'darkMode'
 const darkModeState = () => {
   if (localStorage.getItem("darkMode") == "1") {
-    nightModeDiv.classList.add("dark-theme");
+    html.dataset.theme = `theme-dark`;
   } else {
     localStorage.setItem("darkMode", "0");
+    html.dataset.theme = `theme-light`;
   }
 };
 
-nightModeButton.addEventListener("click", darkModeHandler);
-nightModeDiv.addEventListener("load", darkModeState());
+ttg.addEventListener("click", darkModeHandler);
+window.addEventListener("load", darkModeState());

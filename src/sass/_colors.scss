@@ -1,3 +1,8 @@
+/*
+  If any of these variables change make sure
+  to update Hex Values in _themes.scss too!
+*/
+
 // Neutral -1
 $spring-wood: #fefefd;
 
@@ -10,8 +15,17 @@ $cararra: #ecece9;
 // Neutral +2
 $quill-gray: #dfdfde;
 
+// Brand Gold -90
+$early-dawn: #fffae6;
+
+// Brand Gold -70
+$buttermilk: #fff0b3;
+
 // Brand Gold
 $supernova: #ffcd00;
+
+// Brand Gold +20
+$buddha-gold: #cca400;
 
 // Brand Blue -90
 $catskill-white: #e7edf4;
@@ -37,6 +51,9 @@ $madison: #082e54;
 // Brand Blue +60
 $black-pearl: #061f38;
 
+// Brand Blue +90
+$blue-charcoal: #04172a;
+
 $neutral-minus1: $spring-wood;
 $neutral: $desert-storm;
 $neutral-plus1: $cararra;
@@ -50,5 +67,9 @@ $primary-minus2: $san-marino;
 $primary: $tory-blue;
 $primary-plus4: $madison;
 $primary-plus6: $black-pearl;
+$primary-plus9: $blue-charcoal;
 
+$secondary-minus9: $early-dawn;
+$secondary-minus7: $buttermilk;
 $secondary: $supernova;
+$secondary-plus2: $buddha-gold;

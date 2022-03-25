@@ -1,0 +1,106 @@
+.button {
+  background: transparent;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.08)
+  );
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0px 2px 12px -4px $black-pearl;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 250ms ease-in-out;
+  user-select: none;
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 10;
+}
+
+.button__text {
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-size: var(--step--3);
+  padding: 0.75rem 1rem;
+
+  .icon-fill {
+    fill: var(--primary-cta-text-color);
+  }
+
+  .button-label {
+    line-height: 32px;
+    margin-left: 1rem;
+  }
+
+  .button-emoji {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.button--primary {
+  color: var(--primary-cta-text-color);
+  background-color: var(--primary-cta-base-color);
+  border-color: var(--primary-cta-hover-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-cta-hover-color);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:focus:not(:hover) {
+    outline: 4px solid #c5dbfc;
+  }
+}
+
+.button--secondary {
+  color: var(--secondary-cta-text-color);
+  background-color: var(--secondary-cta-base-color);
+  border-color: var(--secondary-cta-hover-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-cta-hover-color);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:focus:not(:hover) {
+    outline: 4px solid #c5dbfc;
+  }
+}
+
+.button--small {
+  .button__text {
+    font-size: var(--step--4);
+    padding: 0.25rem 0.5rem;
+
+    .button-label {
+      line-height: 24px;
+      margin-left: 0.5rem;
+    }
+
+    .button-emoji {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}

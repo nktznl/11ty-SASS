@@ -1,100 +1,19 @@
 @charset "utf-8";
 
-$font-light-theme: #333333;
-$background-light-theme: #ffffff;
-
-$font-dark-theme: #ffffff;
-$background-dark-theme: #333333;
-
+// Site-Wide variables... Partial-specific variables are in at the top of the Partial
 $small-screen: 700px;
+$bouncy: transform 400ms cubic-bezier(0.7, -0.2, 0.4, 1.4) 0ms;
 
 @import "colors";
+@import "themes";
+@import "utilities";
 
 @import "vendor/js-offcanvas";
-@import "vendor/typescale";
-
 @import "offcanvas-mods";
 
-@import "brand";
+@import "typography";
+@import "buttons";
+@import "media";
 @import "layout";
 
 @import "playpen";
-
-.dark-theme {
-  color: $font-dark-theme;
-  background-color: $background-dark-theme;
-
-  .nav-list {
-    a {
-      color: $font-dark-theme;
-    }
-  }
-
-  .links {
-    margin: 0;
-    color: $font-dark-theme;
-  }
-
-  .night-mode-btn {
-    color: $font-dark-theme;
-
-    svg {
-      fill: $font-dark-theme;
-    }
-  }
-
-  .link-btn {
-    color: $font-dark-theme;
-  }
-
-  .blog-single {
-    color: $font-dark-theme;
-  }
-
-  footer {
-    a {
-      color: $font-dark-theme;
-    }
-  }
-}
-
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-img {
-  width: 100%;
-}
-
-.text-center {
-  text-align: center;
-}
-
-#nightModeDiv {
-  .night-mode-btn {
-    .toLight {
-      display: none;
-    }
-    .toDark {
-      display: block;
-    }
-  }
-
-  &.dark-theme {
-    .night-mode-btn {
-      .toLight {
-        display: block;
-      }
-      .toDark {
-        display: none;
-      }
-    }
-  }
-}

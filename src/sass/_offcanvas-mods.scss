@@ -3,13 +3,12 @@ $shoved-nameplate: translate3d(0, -6.5rem, 0);
 $closed-drawer: translate3d(0, -11rem, 0);
 $open-drawer: translate3d(0, -8.25rem, 0);
 $open-sticky-drawer: translate3d(0, -2.25rem, 0);
-$bouncy: transform 400ms cubic-bezier(0.7, -0.2, 0.4, 1.4) 0ms;
 
 // Normal Masthead (NOT scrolled to the top of page)
 #masthead {
   height: 200px; // set by height of the drawer that is position: relative behind #masthead
   position: sticky;
-  top: -120px;
+  top: -100px;
   z-index: 100;
 
   .nameplate {
@@ -78,32 +77,4 @@ $bouncy: transform 400ms cubic-bezier(0.7, -0.2, 0.4, 1.4) 0ms;
       transform: $closed-drawer;
     }
   }
-}
-
-// Offcanvas Button to match my buttons
-.c-button {
-  background-color: $primary;
-  border-color: $primary-plus4;
-  bottom: -25px;
-  box-shadow: 0px 2px 12px -4px $black-pearl;
-  display: block;
-  font-size: 1rem;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
-}
-
-.c-button__text {
-  color: $neutral;
-  display: flex;
-  // Bonus span to position text next to icon nicely
-  .c-button__label {
-    margin-left: 0.5rem;
-  }
-}
-
-.c-offcanvas {
-  background: $primary-plus4;
-  background-image: url(../img/drawer-bg.svg);
-  background-repeat: repeat;
 }

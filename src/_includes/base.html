@@ -35,14 +35,14 @@ case-studies:
       crossorigin="anonymous"
     ></script>
   </head>
-  <body id="nightModeDiv" class="">
+  <body class="">
     {% include components/navbar.html %}
 
     <main
       class="c-offcanvas-content-wrap"
       aria-labelledby="accesible-offcanvas"
     >
-      <div class="c-page l-wrapper u-pos-relative">{{ content | safe }}</div>
+      {{ content | safe }}
     </main>
 
     {% include components/footer.html %}

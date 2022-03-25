@@ -1,20 +1,105 @@
-body {
-  font-family: "PT Sans", sans-serif;
+/* @link https://utopia.fyi/type/calculator?c=375,32,1.2,1512,57,1.414,0,4,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --step--4: clamp(0.89rem, calc(0.99rem + -0.1vw), 0.96rem);
+  --step--3: clamp(1.26rem, calc(1.12rem + 0.14vw), 1.16rem);
+  --step--2: clamp(1.78rem, calc(1.26rem + 0.55vw), 1.39rem);
+  --step--1: clamp(2.52rem, calc(1.39rem + 1.2vw), 1.67rem);
+  --step-0: clamp(2rem, calc(1.48rem + 2.2vw), 3.56rem);
 }
 
 h1 {
+  color: var(--h1-color);
   font-family: "Raleway", sans-serif;
-  font-size: 2rem;
+  font-size: var(--step-0);
+  font-weight: 600;
+  line-height: 1.25em;
+  margin: 0 0 1em 0;
 }
 
 h2 {
+  color: var(--h2-color);
+  font-family: "Raleway", sans-serif;
+  font-size: var(--step--1);
+  font-weight: 400;
+  line-height: 1.25em;
   margin: 0;
+}
+
+.subhead {
+  color: var(--subhead-color);
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: var(--step--2);
+  font-weight: 400;
+  line-height: 2em;
+  margin-top: 1rem;
 }
 
 p {
+  color: var(--p-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: var(--step--3);
+  line-height: 2em;
   margin: 0;
 }
 
-section {
-  margin-bottom: 3em;
+a {
+  color: var(--a-base-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: var(--step--3);
+  text-decoration: underline;
+  transition: color 125ms ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--a-hover-color);
+}
+
+a:hover,
+a:focus,
+a:active {
+}
+
+.button:focus:not(:hover) {
+  outline: 4px solid #c5dbfc;
+}
+
+ul {
+  margin-left: 3em;
+  padding-bottom: 1.18em;
+}
+
+li {
+  color: var(--p-color);
+  margin-bottom: 1em;
+}
+
+.fineprint {
+  color: var(--p-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: var(--step--4);
+  a {
+    font-size: var(--step--4);
+  }
+}
+
+.u-unstyled,
+.o-list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+.o-list-inline {
+  padding: 0;
+  list-style: none;
+}
+.o-list-inline > li {
+  display: inline-block;
 }

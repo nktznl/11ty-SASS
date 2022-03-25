@@ -1,0 +1,100 @@
+:root[data-theme="theme-light"] {
+  --logo-main: #ffcd00; // $secondary
+  --logo-accent: #0e4d8c; // $primary
+  --nameplate-main: #0e4d8c; // $primary
+  --nameplate-accent: #061f38; // $primary-plus6;
+  --body-color: #e7edf4; // $primary-minus9
+  --head-foot-color: #f8f8f7; // $neutral
+  --head-foot-border-color: #ecece9; // $neutral-plus1
+  --h1-color: #061f38; // $primary-plus6;
+  --subhead-color: #082e54; // $primary-plus4
+  --h2-color: #061f38; // $primary-plus6
+  --p-color: #061f38; // $primary-plus6
+  --a-base-color: #0e4d8c; // $primary
+  --a-hover-color: #082e54; // $primary-plus4 ;
+  --primary-cta-base-color: #0e4d8c; // $primary
+  --primary-cta-hover-color: #082e54; // $primary-plus4
+  --primary-cta-text-color: #f8f8f7; // $neutral
+  --secondary-cta-base-color: #ecece9; // $neutral-plus1
+  --secondary-cta-hover-color: #dfdfde; // $neutral-plus2
+  --secondary-cta-text-color: #082e54; // $primary-plus4
+}
+
+:root[data-theme="theme-dark"] {
+  --logo-main: #ffcd00; // $secondary
+  --logo-accent: #f8f8f7; // $neutral
+  --nameplate-main: #ffcd00; // $secondary
+  --nameplate-accent: #f8f8f7; // $neutral
+  --body-color: #082e54; // $primary-plus4
+  --head-foot-color: #061f38; // $primary-plus6
+  --head-foot-border-color: #04172a; // $primary-plus9
+  --h1-color: #ffcd00; // $secondary
+  --subhead-color: #fff0b3; // $secondary-minus7
+  --h2-color: #ffcd00; // $secondary
+  --p-color: #fffae6; // $secondary-minus9
+  --a-base-color: #ffcd00; // $secondary
+  --a-hover-color: #cca400; // $secondary-plus2
+  --primary-cta-base-color: #f8f8f7; // $neutral
+  --primary-cta-hover-color: #dfdfde; // $neutral-plus2
+  --primary-cta-text-color: #0e4d8c; // $primary
+  --secondary-cta-base-color: #061f38; // $primary-plus6
+  --secondary-cta-hover-color: #04172a; // $primary-plus9
+  --secondary-cta-text-color: #ffcd00; // $secondary
+}
+
+@mixin change-theme {
+  h1,
+  .subhead,
+  h2,
+  p,
+  a {
+    transition: color 250ms ease-in-out;
+  }
+
+  body,
+  header,
+  footer {
+    transition: background-color 250ms ease-in-out,
+      border-color 250ms ease-in-out;
+  }
+}
+
+html[data-theme="theme-dark"] {
+  @include change-theme;
+
+  #theme-toggle {
+    .toLight {
+      display: block;
+    }
+    .toDark {
+      display: none;
+    }
+  }
+}
+
+html[data-theme="theme-light"] {
+  @include change-theme;
+
+  h1,
+  .subhead,
+  h2,
+  p,
+  a {
+    transition: color 250ms ease-in-out;
+  }
+
+  body,
+  header,
+  footer {
+    transition: background-color 250ms ease-in-out,
+      border-color 250ms ease-in-out;
+  }
+  #theme-toggle {
+    .toLight {
+      display: none;
+    }
+    .toDark {
+      display: block;
+    }
+  }
+}
