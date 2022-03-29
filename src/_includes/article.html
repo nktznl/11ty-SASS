@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
   </head>
   <body id="nightModeDiv">
-    {% include components/navbar.html %}
+    {% include "components/navbar.html" %}
     <div class="article-wrapper">
       <h1>{{title}}</h1>
-      <article class="paragraph text-lg">{{ content | safe }}</article>
+      <article class="paragraph text-lg">{{ content }}</article>
     </div>
-    {% include components/footer.html %}
+    {% include "components/footer.html" %}
     <script src="{{ '/js/script.js' | url }}"></script>
     
   </body>
